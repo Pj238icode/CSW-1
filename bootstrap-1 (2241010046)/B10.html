@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Checkout Form</title>
+</head>
+
+<body style="background:rgba(237, 236, 236, 0.873)">
+    <style>
+        .img-1 {
+            height: 13rem;
+            width: 12rem;
+            margin-left: 28rem;
+
+        }
+
+        #payment-2 {
+            margin-top: -30rem;
+            margin-left: 0rem;
+
+        }
+
+        #payment-1 {
+            transform: translateY(53rem);
+            margin-left: -36rem
+        }
+
+        .card {
+            width: 27rem;
+            padding-top: -1rem;
+            margin-top: -15rem;
+            height: 7rem;
+            margin-left: 78rem;
+        }
+    </style>
+
+    <div class="container mt-5">
+        <img class="img-1" src="https://seeklogo.com/images/B/bootstrap-logo-3C30FB2A16-seeklogo.com.png">
+        <p class="font-weight-bold mt-4">Below is an example form built entirely with Bootstrap 's form controls. Each
+            required form griup has a validation state that can be triggered by attempting to submit the form without
+            completing it.</p>
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Billing Address</h4>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email(Optional)</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address-2">Address-2(Optional)</label>
+                        <input type="text" class="form-control" id="address-2" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="country">country</label>
+                            <input type="text" class="form-control" id="country" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="state">state</label>
+                            <input type="text" class="form-control" id="state" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="zip">Zip</label>
+                            <input type="text" class="form-control" id="Zip" required>
+                        </div>
+                    </div>
+                    <hr>
+
+
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="sameAddress">
+                            <label class="form-check-label" for="sameAddress">
+                                Shipping address is the same as billing address
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="saveInfo">
+                        <label class="form-check-label" for="saveInfo">
+                            Save this information for next time
+                        </label>
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="col-md-6" id="payment-1">
+                    <h4>Payment Information</h4>
+                    <div class="form-group">
+                        <label for="cardName">Name on Card</label>
+                        <input type="text" class="form-control" id="cardName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Credit Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="expiration">Expiration Date</label>
+                            <input type="text" class="form-control" id="expiration" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cvv">CVV</label>
+                            <input type="text" class="form-control" id="cvv" required>
+                        </div>
+                        <button type="button" class="btn btn-primary text text-light" style="width: 34rem;">Continue to
+                            Checkout</button>
+                    </div>
+
+                    <div class="form-group" id="payment-2">
+                        <label for="paymentMethod">Payment Method</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                            <label class="form-check-label" for="creditCard">
+                                Credit Card
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="debitCard">
+                            <label class="form-check-label" for="debitCard">
+                                Debit Card
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                            <label class="form-check-label" for="paypal">
+                                Paypal
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Product 1 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$5
+                </h5>
+
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Product 2 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; $5</h5>
+
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Product 3 &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; $5</h5>
+
+            </div>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">PromoCode &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    &nbsp;&nbsp; &nbsp; -$5</h5>
+
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Total (USD):</strong>
+                    </div>
+                    <div class="col-md-6">
+
+                        <span id="totalAmount" class="mt-0">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            &nbsp;&nbsp; &nbsp;&nbsp; $10.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

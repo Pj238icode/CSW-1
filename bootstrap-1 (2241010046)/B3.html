@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar Example</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <h2>Progress Bar </h2>
+
+
+        <div class="form-group">
+            <label for="progressInput">Enter Value:</label>
+            <input type="number" class="form-control" id="progressInput" min="0" max="100" step="1" value="0">
+        </div>
+
+
+        <div class="progress">
+            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('#progressInput').on('input', function () {
+                var inputValue = $(this).val();
+                var regex = /^[a-zA-z]{1,}$/
+                if (regex.test($("#progressInput").val()) || $("#progressInput").val() == "") {
+                    $("#progressInput").css('border-color', 'red');
+                    $('#progressBar').attr('aria-valuenow', 0);
+                    $('#progressBar').css('width', '0%');
+                    $('#progressBar').text(value + '%');
+
+
+                }
+                else {
+                    $("#progressInput").css('border-color', 'white');
+
+                    updateProgressBar(inputValue);
+
+                }
+
+
+
+            });
+
+
+            function updateProgressBar(value) {
+
+                $('#progressBar').css('width', value + '%');
+                $('#progressBar').attr('aria-valuenow', value);
+                $('#progressBar').text(value + '%');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
